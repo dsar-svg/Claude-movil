@@ -10,7 +10,7 @@ STILLS = '--stills' in sys.argv
 rng = np.random.default_rng(7)
 
 # segment: file, push-in zoom (start, end)
-SEGS = [('s1', 1.00, 1.05), ('s2', 1.04, 1.00), ('s3', 1.00, 1.10), ('s4', 1.00, 1.05), ('s5', 1.00, 1.09)]
+SEGS = [('s1', 1.00, 1.03), ('s2', 1.02, 1.00), ('s3', 1.00, 1.05), ('s4', 1.00, 1.03), ('s5', 1.00, 1.04)]
 
 def read(name):
     cap = cv2.VideoCapture(f'{D}/seg/{name}.mp4')
@@ -45,43 +45,32 @@ def whip(img, dx, blur):
 # ---------- grade ----------
 yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
 r = np.sqrt(((xx - W / 2) / (W / 2)) ** 2 + ((yy - H / 2) / (H / 2)) ** 2) / math.sqrt(2)
-GRAD = np.clip(0.78 + 0.22 * (yy / (H * 0.55)), 0, 1)[..., None]  # graduated ND: darker, moodier sky
-VIG = GRAD * (1 - 0.42 * np.clip(r - 0.25, 0, 1) ** 1.6 / 0.75 ** 1.6)[..., None].astype(np.float32)
+GRAD = np.clip(0.90 + 0.10 * (yy / (H * 0.55)), 0, 1)[..., None]  # graduated ND: darker, moodier sky
+VIG = GRAD * (1 - 0.22 * np.clip(r - 0.25, 0, 1) ** 1.6 / 0.75 ** 1.6)[..., None].astype(np.float32)
 GRAIN = [cv2.GaussianBlur(rng.normal(0, 1, (H, W)).astype(np.float32), (0, 0), 0.7) for _ in range(12)]
 
 def tone(x):
     x = np.clip(x, 0, 1)
     s = x * x * (3 - 2 * x)
-    x = x + 0.35 * (s - x)                                   # S-curve contrast
+    x = x + 0.20 * (s - x)                                   # S-curve contrast
     k = 0.72
     hi = k + (1 - k) * np.tanh((x - k) / (1 - k)) * 0.80     # soft highlight shoulder (blown sky -> creamy)
     x = np.where(x > k, hi, x)
-    return 0.035 + x * (0.955 - 0.035)                        # lifted blacks, rolled whites
+    return 0.02 + x * (0.97 - 0.02)                        # lifted blacks, rolled whites
 
 LUT = tone(np.arange(256, dtype=np.float32) / 255)
 
 def grade(bgr, warm=1.0):
     f = cv2.LUT(bgr, (LUT * 255).astype(np.uint8)).astype(np.float32) / 255  # BGR
     Y = (0.0722 * f[..., 0] + 0.7152 * f[..., 1] + 0.2126 * f[..., 2])[..., None]
-    f = Y + (f - Y) * 0.80                                   # desaturate
+    f = Y + (f - Y) * 0.92                                   # desaturate
     sh = (1 - Y) ** 2.2
     mid = 4 * Y * (1 - Y)
     hi = Y ** 3
-    f += sh * np.float32([0.045, 0.018, -0.03])              # teal shadows (BGR)
-    f += mid * np.float32([-0.03, 0.0, 0.035]) * warm        # warm mids / skin
-    f += hi * np.float32([0.02, 0.008, -0.01])               # cool highlights
-    # halation: warm glow around brights (computed small for speed)
-    m = np.clip((Y - 0.70) / 0.30, 0, 1)
-    sm = cv2.resize(m, (W // 6, H // 6), interpolation=cv2.INTER_AREA)
-    glow = cv2.resize(cv2.GaussianBlur(sm, (0, 0), 9), (W, H))[..., None]
-    f = 1 - (1 - f) * (1 - glow * np.float32([0.05, 0.09, 0.16]))
-    # chromatic aberration at the edges
-    b = cv2.warpAffine(f[..., 0], np.float32([[0.9985, 0, W * 0.00075], [0, 0.9985, H * 0.00075]]), (W, H), borderMode=cv2.BORDER_REFLECT)
-    rr = cv2.warpAffine(f[..., 2], np.float32([[1.0015, 0, -W * 0.00075], [0, 1.0015, -H * 0.00075]]), (W, H), borderMode=cv2.BORDER_REFLECT)
-    f = np.dstack([b, f[..., 1], rr])
+    f += sh * np.float32([0.02, 0.008, -0.012])              # teal shadows (BGR)
+    f += mid * np.float32([-0.015, 0.0, 0.018]) * warm        # warm mids / skin
+    f += hi * np.float32([0.01, 0.004, -0.005])               # cool highlights
     f *= VIG
-    g = GRAIN[rng.integers(len(GRAIN))][..., None]
-    f += g * 0.030 * (0.35 + 4 * Y * (1 - Y))
     return f
 
 # ---------- text ----------
@@ -140,22 +129,10 @@ def frame(si, i):
     e_ = N - 1 - i
     # transitions (by boundary): 0 s1->s2 punch, 1 s2->s3 light zoom blur, 2 s3->s4 big zoom blur, 3 s4->s5 whip
     flash = 0.0
-    if si == 1 and i < 6:                                     # punch-in settle
-        s *= 1 + 0.10 * (1 - eout(i / 6)); flash = 0.18 * (1 - i / 6)
-    if si == 0 and e_ < 3:
-        s *= 1 + 0.04 * ein(1 - e_ / 3)
-    if si == 1 and e_ < 5:
-        k = ein(1 - e_ / 5); img = zoom_blur(img, s * (1 + 0.15 * k), 0.10 * k, 6)
-    elif si == 2 and i < 5:
-        k = 1 - eout(i / 5); img = zoom_blur(img, s * (1 + 0.15 * k), 0.10 * k, 6)
-    elif si == 2 and e_ < 10:
-        k = ein(1 - e_ / 10); img = zoom_blur(img, s * (1 + 0.8 * k), 0.45 * k); flash = 0.55 * k ** 2
-    elif si == 3 and i < 12:
-        k = 1 - eout(i / 12); img = zoom_blur(img, s * (1 + 0.8 * k), 0.45 * k); flash = 0.55 * k ** 2
-    elif si == 3 and e_ < 7:
-        k = ein(1 - e_ / 7); img = whip(warp(img, s * (1 + 0.08 * k)), -W * 0.35 * k, 1 + 340 * k)
-    elif si == 4 and i < 7:
-        k = 1 - eout(i / 7); img = whip(warp(img, s * (1 + 0.08 * k)), W * 0.35 * k, 1 + 340 * k)
+    if si == 2 and e_ < 5:
+        k = ein(1 - e_ / 5); img = zoom_blur(img, s * (1 + 0.20 * k), 0.10 * k, 6)
+    elif si == 3 and i < 6:
+        k = 1 - eout(i / 6); img = zoom_blur(img, s * (1 + 0.20 * k), 0.10 * k, 6)
     else:
         img = warp(img, s)
     if img.dtype != np.uint8:
@@ -163,14 +140,12 @@ def frame(si, i):
     f = grade(img, warm=1.2 if si < 3 else 0.9)
     if flash: f = f + (1 - f) * flash
     t = (starts[si] + i) / FPS
-    f = title(f, t)
-    f = bars(f, t, T)
-    fade = min(1, t / 0.35) * min(1, max(0, (T - t) / 0.9))
+    fade = min(1, t / 0.3) * min(1, max(0, (T - t) / 0.6))
     return np.clip(f * ease(fade) * 255, 0, 255).astype(np.uint8)
 
 out = sys.argv[1]
 if STILLS:
-    picks = [(0, 30), (1, 2), (2, 66), (3, 3), (3, 113), (4, 2), (4, 40)]
+    picks = [(0, 30), (1, 20), (2, 40), (2, 72), (3, 2), (3, 60), (4, 40)]
     ims = [cv2.resize(frame(a, b), (270, 480), interpolation=cv2.INTER_AREA) for a, b in picks]
     cv2.imwrite(out, np.hstack(ims)); sys.exit()
 

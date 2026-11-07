@@ -97,6 +97,7 @@ for k in range(1, 12):
 def ir(seed):
     g = np.random.default_rng(seed); tt = np.arange(int(2.4 * SR)) / SR
     return lp(g.normal(0, 1, len(tt)), 5000) * np.exp(-tt / 0.7) * 0.012
+if '--amb-only' in sys.argv: pad = fx = sub = 0 * t  # natural sound only, room for a song
 send = pad + fx * 0.6
 L = pad * 0.8 + fx + sub + amb + fftconvolve(send, ir(1))[:N]
 R = pad * 0.8 + fx + sub + amb + fftconvolve(send, ir(2))[:N]
