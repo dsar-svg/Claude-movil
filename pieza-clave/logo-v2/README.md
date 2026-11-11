@@ -15,4 +15,4 @@ Comparativa completa: `comparativa-logo.html` · https://claude.ai/artifact/SZfr
 | `logotipo-color.svg`, `logotipo-negativo.svg` | Solo el nombre |
 | `foto-perfil.png` | Instagram, TikTok y WhatsApp, 1080 × 1080 |
 
-Pendiente de aprobación: todavía no reemplaza al logo de la caja en el sistema de marca.
+Aprobado en noviembre de 2026: reemplazó a la caja de herramientas. Los archivos vigentes también están en `../logos`.

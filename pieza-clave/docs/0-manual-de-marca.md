@@ -51,21 +51,26 @@ Ejemplos reales:
 
 ## Logo
 
-El símbolo es **la caja**: una caja de herramientas con la tapa inclinada y dos cierres laterales. En la caja cabe todo lo que vende la tienda (taller, exterior y energía), y los dos cierres en `chispa` son las piezas clave que la mantienen cerrada. Se eligió frente a otras 5 propuestas porque se entiende al instante (para una marca nueva, un logo que dice qué vende genera más confianza) y porque se reconoce hasta en 16 px.
+El símbolo es **el dado**: la P de Pieza construida con un dado de herramienta visto de frente. El círculo es el dado, el hexágono es su boca y la tuerca en `chispa` es la pieza que encaja. Las dos esquinas exteriores del mango van biseladas a 45°, como una pieza maquinada: es el detalle que lo hace propio. Reemplazó a la caja de herramientas en noviembre de 2026 porque la caja era un icono genérico que no salía del nombre; se eligió entre cuatro direcciones (comparativa: https://claude.ai/artifact/SZfrpgXwGFZp9GXxC7vKHG).
+
+El nombre del logo está dibujado en curvas a partir de **Archivo extendida Black** (ancho 112), con ajuste de espacio en LA y AV. Es solo para el logo: las publicaciones siguen en Barlow Condensed y Barlow.
+
+Construcción, en una retícula de 12 unidades: círculo de 72, boca hexagonal de 40 con la punta hacia arriba, tuerca de 27 (holgura de 6), mango de 24 × 96 con biseles de 8 a 45°.
 
 Archivos (grupo **Logos**):
 - `logo-horizontal-color.svg`: el logo principal. Úsalo sobre `concreto` o `blanco`.
-- `logo-horizontal-negativo.svg`: sobre `acero` o fotos oscuras. Caja y nombre en `blanco`, cierres en `chispa`.
-- `logo-horizontal-grafito.svg` y `logo-horizontal-blanco.svg`: a una tinta, para sellos, facturas, bolsas o grabados.
+- `logo-horizontal-negativo.svg`: sobre `acero` o fotos oscuras. P y nombre en `blanco`, tuerca en `chispa`.
+- `logo-horizontal-grafito.svg` y `logo-horizontal-blanco.svg`: a una tinta, para sellos, facturas, bolsas o grabado láser.
 - `logo-vertical-color.svg` y `logo-vertical-negativo.svg`: para espacios cuadrados o altos (historias, etiquetas, la fachada del local).
-- `isotipo-color.svg` e `isotipo-negativo.svg`: la caja sola, para marcas de agua, esquinas de carruseles y stickers.
-- `logotipo-color.svg`: solo el nombre, cuando la caja ya aparece en otro lugar de la pieza.
-- `foto-perfil.png`: la caja en `blanco` y `chispa` sobre `acero`, 1080 × 1080, para Instagram, TikTok y WhatsApp.
+- `isotipo-color.svg` e `isotipo-negativo.svg`: la P sola, para marcas de agua, esquinas de carruseles y stickers.
+- `isotipo-grafito.svg` e `isotipo-blanco.svg`: la P a una tinta. `isotipo-grafito.svg` sobre `chispa` sirve para stickers y promociones.
+- `logotipo-color.svg` y `logotipo-negativo.svg`: solo el nombre, cuando la P ya aparece en otro lugar de la pieza.
+- `foto-perfil.png`: la P en `blanco` y `chispa` sobre `acero`, 1080 × 1080, para Instagram, TikTok y WhatsApp.
 
 Reglas:
-- Deja libre alrededor del logo al menos 1/4 del alto de la caja por cada lado.
-- Tamaño mínimo: 120 px de ancho para el horizontal y 16 px para la caja sola.
-- Los cierres van siempre en `chispa`, salvo en las versiones a una tinta.
+- Deja libre alrededor del logo al menos el ancho del mango de la P (un cuarto del alto del símbolo).
+- Tamaño mínimo: 120 px (30 mm) de ancho para el horizontal y 16 px (6 mm) para la P sola.
+- La tuerca va siempre en `chispa`, salvo en las versiones a una tinta.
 - No cambies los colores, no estires ni rotes el logo, no le pongas sombras ni contornos y no lo pongas directo sobre una foto: va dentro de un bloque `acero` o `concreto`.
 
 ## Fotos y video
