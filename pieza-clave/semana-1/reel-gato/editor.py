@@ -1,4 +1,4 @@
-# Reel del gato: compositor v2 (copia de trabajo). Espera clips/, ov/, audio/ y words.json junto a él; ver README.
+# Reel del gato: compositor v3 (copia de trabajo). Espera clips/, ov/, audio/ y words.json junto a él; ver README.
 """Edición v2 del reel del gato: python3 edit2.py A|B salida.mp4
 Compositor cuadro a cuadro (PIL + numpy) sincronizado con la voz."""
 import sys, os, json, math, subprocess
@@ -38,7 +38,7 @@ def load(path, start, dur, speed=None):
     for i in range(n):
         idx=min(len(fr)-1,int((start+i/FPS*sp)*fps)); out.append(cv2.resize(fr[idx],(W,H),interpolation=cv2.INTER_AREA))
     return out
-SH=[('clips/v1.mp4',0.2,0,T_V2,None),('clips/v2.mp4',0.3,T_V2,T_V3,None),('clips/v3b.mp4',0.4,T_V3,T_V4,'fit'),('clips/v4.mp4',0.4,T_V4,T_END,None)]
+SH=[('clips/v1.mp4',0.2,0,T_V2,None),('clips/v2c.mp4',0.0,T_V2,T_V3,'fit'),('clips/v3b.mp4',0.05,T_V3,T_V4,'fit'),('clips/v4.mp4',0.4,T_V4,T_END,None)]
 shots=[(a,b,load(p,ss,b-a,sp)) for p,ss,a,b,sp in SH]
 endbg=np.array(Image.open('/home/user/Claude-movil/pieza-clave/semana-1/escenas-ia/gato916b.jpg').convert('RGB').resize((W,H)))
 
@@ -167,9 +167,9 @@ def frame(i):
     if T_V2<=t<T_END: paste(base,iso_s,W-40-iso_s.width/2,170,1.0,clamp((t-T_V2)/0.3)*0.95)
     # shot 2
     if T_V2<=t<T_V3:
-        k=back(clamp((t-T_V2-0.1)/0.35)); paste(base,blk_t2,40+blk_t2.width/2-(1-clamp(k))*(blk_t2.width+60)+0,300+blk_t2.height/2)
+        k=back(clamp((t-T_V2-0.1)/0.35)); paste(base,blk_t2,W-40-blk_t2.width*0.82/2+(1-clamp(k))*(blk_t2.width+60),250+blk_t2.height*0.82/2,0.82)
         tb=wt('toneladas')-0.05
-        if t>=tb: k=clamp((t-tb)/0.3); paste(base,BADGE,820,980,back(k)*1.0,clamp(k*2))
+        if t>=tb: k=clamp((t-tb)/0.3); paste(base,BADGE,220,1610,back(k)*1.0,clamp(k*2))
     # shot 3: medidor
     if T_V3<=t<T_V4: measure(base,t,wt('doce'),wt('treinta',edge='end'))
     # shot 4
@@ -202,6 +202,11 @@ def frame(i):
     return np.asarray(base.convert('RGB'))
 
 n=int(DUR*FPS)
+if os.environ.get('PREVIEW'):
+    print('blk_t2',blk_t2.size,'BADGE',BADGE.size,'T_V2',T_V2,'T_V3',T_V3)
+    for ts in os.environ['PREVIEW'].split(','):
+        Image.fromarray(frame(int(float(ts)*FPS))).save(f'../prev_{ts}.jpg',quality=80)
+    sys.exit()
 p=subprocess.Popen(['ffmpeg','-y','-v','error','-f','rawvideo','-pix_fmt','rgb24','-s',f'{W}x{H}','-r',str(FPS),'-i','-',
     '-c:v','libx264','-preset','medium','-crf','18','-pix_fmt','yuv420p','tmp_v2.mp4'],stdin=subprocess.PIPE)
 for i in range(n): p.stdin.write(frame(i).tobytes())
