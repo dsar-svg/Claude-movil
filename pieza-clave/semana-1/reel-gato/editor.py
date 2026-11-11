@@ -1,4 +1,4 @@
-# Reel del gato: compositor v4 (copia de trabajo). Espera clips/, ov/, audio/ y words.json junto a él; ver README.
+# Reel del gato: compositor (copia de trabajo). Espera clips/, ov/, audio/ y words.json junto a él; ver README.
 """Edición v2 del reel del gato: python3 edit2.py A|B salida.mp4
 Compositor cuadro a cuadro (PIL + numpy) sincronizado con la voz."""
 import sys, os, json, math, subprocess
@@ -146,6 +146,14 @@ def measure(base,t,t0,t1):
     d.text((x+20,ytop1-30),'CM',font=B6(28),fill=(203,211,213,int(255*a)),anchor='mm')
     base.alpha_composite(ov)
 
+def _ptag():
+    fa=ImageFont.truetype(FD+'Archivo_wdth_wght_125_900.ttf',150); fl=BC8(34)
+    w,h=520,230; im=Image.new('RGBA',(w+80,h),(0,0,0,0)); d=ImageDraw.Draw(im)
+    d.polygon([(40,0),(w+80,0),(w+40,h),(0,h)],fill=CHISPA+(255,))
+    d.text(((w+80)/2,62),'PRECIO',font=fl,fill=(22,27,29,255),anchor='mm')
+    d.text(((w+80)/2,150),'42$',font=fa,fill=(255,255,255,255),anchor='mm')
+    return im
+PTAG=_ptag()
 def frame(i):
     t=i/FPS
     if t<T_END:
@@ -188,6 +196,8 @@ def frame(i):
             k3=ease_out(clamp((ts-0.35)/0.3)); im=Image.new('RGBA',(1000,240),(0,0,0,0)); d=ImageDraw.Draw(im)
             d.text((500,60),U('Gato hidráulico'),font=f,fill=BLANCO,anchor='mm'); d.text((500,160),U('2 toneladas'),font=f,fill=CHISPA,anchor='mm')
             paste(base,im,W/2,600+(1-k3)*30,1.0,k3)
+        if ts>0.6:
+            k6=back(clamp((ts-0.6)/0.35)); paste(base,PTAG,W/2,930,k6,clamp(k6*2),rot=-4)
         tw=wt('WhatsApp')-0.1
         if t>=tw-0.25:
             kp=ease_out(clamp((t-(tw-0.25))/0.3)); paste(base,rrect(1000,330,12,ACERO+(240,)),W/2,1450+(1-kp)*60,1.0,kp)
@@ -215,7 +225,7 @@ p.stdin.close(); p.wait()
 
 # ---------- audio ----------
 ev=[('whoosh',T_V2-0.15,6),('whoosh',T_2B-0.15,2),('whoosh',T_V3-0.15,4),('whoosh',T_V4-0.15,4),('whoosh',T_END-0.15,5),
-    ('stamp',wt('tijera')+0.1,9),('pop',wt('toneladas')-0.05,3),('sfx',T_V3+0.1,12),('pop',wt('maleta'),3),('pop',wt('WhatsApp')-0.1,5)]
+    ('stamp',wt('tijera')+0.1,9),('pop',wt('toneladas')-0.05,3),('sfx',T_V3+0.1,12),('pop',wt('maleta'),3),('pop',wt('WhatsApp')-0.1,5),('pop',T_END+0.6,4)]
 inp=['-i','tmp_v2.mp4','-i',f'audio/vo{V}.mp3','-i','audio/music.mp3']; fl=[]; mix=['[vo]','[mus]']
 for j,(name,at,db) in enumerate(ev):
     inp+=['-i',f'audio/{name}.mp3']; ms=int(max(0,at)*1000)

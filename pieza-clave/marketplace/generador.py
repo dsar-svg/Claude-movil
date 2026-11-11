@@ -24,6 +24,7 @@ P=[
 ]
 SLUG={'gato':'gato-hidraulico-2t','dados':'juego-dados-108','llaves':'llaves-combinadas-14','multi':'multiplicador-fuerza','compre':'compresimetro','mano':'manometros-refrigeracion','engra':'engrasadora-400cc','adapt':'adaptadores-impacto','poli':'polipasto-electrico','corta':'cortadora-cesped','desma':'desmalezadora','moto':'motosierra','taladro':'taladro-inalambrico','esmeril':'esmeril-y-taladro'}
 OUT=[]
+def pricetag(k): return f'<div style="text-align:right"><div style="font:700 22px/1 BC;color:#5b6b70;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px">Entregas en Valencia</div><span class="tag" style="background:{CH}"><span class="ax" style="font-size:92px;color:#fff;letter-spacing:-2px">{PRICE[k]}$</span></span></div>'
 def page(n,html,w=1080,h=1080): OUT.append({'name':n,'w':w,'h':h,'html':'<style>'+CSS+'</style><div class="s" style="width:%dpx;height:%dpx">'%(w,h)+html+'</div>'+FIT})
 def chipc(T): return {'taller':CH,'pro':'#151b1e','ext':EX,'ele':VO}[T['k']]
 for k,cat,name,sub,specs,uses in P:
@@ -34,7 +35,7 @@ for k,cat,name,sub,specs,uses in P:
 {prod(k,90,150,900,740)}
 <div class="ab" style="left:40px;right:40px;top:930px;display:flex;justify-content:space-between;align-items:flex-end">
 <div><div class="bc fit" style="font-size:56px;color:{AC};white-space:nowrap;max-width:640px">{name}</div><div class="bc" style="font-size:36px;color:{CH};margin-top:4px">{sub}</div></div>
-<span style="display:inline-flex;gap:10px;align-items:center;background:{AC};color:#fff;border-radius:999px;padding:12px 22px;font:700 26px/1 BC;letter-spacing:.05em;text-transform:uppercase">{I("camion","#fff").replace('class="ico"','style="width:34px;height:34px"')}Entregas en Valencia</span></div>
+{pricetag(k) if k in PRICE else f'<span style="display:inline-flex;gap:10px;align-items:center;background:{AC};color:#fff;border-radius:999px;padding:12px 22px;font:700 26px/1 BC;letter-spacing:.05em;text-transform:uppercase">{I("camion","#fff").replace(chr(99)+"lass="+chr(34)+"ico"+chr(34),"style="+chr(34)+"width:34px;height:34px"+chr(34))}Entregas en Valencia</span>'}</div>
 <div class="ab" style="left:0;right:0;bottom:0;height:14px;background:{cc}"></div>''')
     # 2) ficha
     sp=''.join(f'<div style="display:flex;gap:18px;align-items:center;padding:20px 0;border-top:2px solid {LI}">{I(ic,CH)}<div><div style="font:800 46px/1 BC;color:{AC};text-transform:uppercase">{v}</div><div style="font:600 22px/1.2 B;color:#5b6b70;letter-spacing:.06em;text-transform:uppercase;margin-top:4px">{kk}</div></div></div>' for ic,v,kk in specs)
@@ -47,7 +48,7 @@ for k,cat,name,sub,specs,uses in P:
 {prod(k,470,290,580,480)}
 <div class="ab" style="left:40px;right:40px;top:800px;display:grid;gap:10px">{us}</div>
 <div class="ab" style="left:0;right:0;bottom:0;height:120px;background:{AC};display:flex;align-items:center;justify-content:space-between;padding:0 40px">
-<div style="font:700 34px/1.1 BC;color:#fff;text-transform:uppercase;letter-spacing:.03em">Pregunta precio<br><span style="color:{CH}">y disponibilidad</span></div>{wa_pill(T_TALLER,'Escríbenos')}</div>''')
+{f'<div style="display:flex;align-items:baseline;gap:18px"><span style="font:700 30px/1 BC;color:#c9d6d9;text-transform:uppercase;letter-spacing:.08em">Precio</span><span class="ax" style="font-size:78px;color:{CH};letter-spacing:-2px">{PRICE[k]}$</span></div>' if k in PRICE else '<div style="font:700 34px/1.1 BC;color:#fff;text-transform:uppercase;letter-spacing:.03em">Pregunta precio<br><span style="color:'+CH+'">y disponibilidad</span></div>'}{wa_pill(T_TALLER,'Escríbenos')}</div>''')
     # 3) cómo comprar
     steps=''.join(f'<div style="display:grid;grid-template-columns:70px 1fr;gap:20px;align-items:center;padding:22px 0;border-top:2px solid #2c5560">{I(ic,CH)}<div><div class="bc" style="font-size:44px;color:#fff">{t}</div><div style="font:500 26px/1.3 B;color:#c9d6d9;margin-top:4px">{d}</div></div></div>' for ic,t,d in [('chat','Escríbenos','Por WhatsApp o mensaje. Dinos qué carro o trabajo tienes.'),('check','Te confirmamos','Precio, disponibilidad y si te sirve.'),('camion','Te lo llevamos','Entregas en Valencia o pasas por el local.')])
     page(f'{slug}-3-como-comprar',f'''<div class="ab" style="inset:0;background:{AC}"></div>

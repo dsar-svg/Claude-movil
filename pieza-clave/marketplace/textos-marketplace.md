@@ -2,17 +2,18 @@
 
 Cada producto tiene 3 imágenes en su carpeta (súbelas en este orden: 1-principal, 2-ficha, 3-como-comprar) y su título y descripción listos para pegar.
 
-Antes de publicar: completa **[precio]**, confirma el **estado** (puse "Nuevo") y revisa que los datos coincidan con lo que tienes en el local.
+Con precio confirmado: gato 42$, adaptadores 20$, llaves 20$, reloj de refrigeración 38$. En los demás completa **[precio]** (y avísame para ponerlo también en las imágenes).
 
-Ubicación sugerida: Valencia, Carabobo.
+Confirma el **estado** (puse "Nuevo") y que los datos coincidan con lo que tienes. Ubicación sugerida: Valencia, Carabobo.
 
-## Gato hidráulico 2 toneladas
+## Gato hidráulico 2 toneladas — 42$
 Carpeta: `gato-hidraulico-2t/`
 
-**Título** (62 caracteres)
+**Título** (74 caracteres)
 ```
-Gato hidráulico 2 toneladas con estuche | Entregas en Valencia
+Gato hidráulico tipo caimán 2 toneladas con estuche | Entregas en Valencia
 ```
+**Precio para el campo de precio:** 42
 **Categoría:** Herramientas · **Estado:** Nuevo
 
 **Descripción**
@@ -24,8 +25,9 @@ Gato hidráulico 2 toneladas.
 • Para cambiar cauchos en casa
 • Sube bombeando la palanca
 • Base ancha con ruedas: queda firme
+• También conocido como gato tipo caimán
 
-Precio: [precio]
+Precio: 42$
 📍 Valencia, Carabobo · Entregas en Valencia
 💬 Escríbenos y te decimos si le sirve a tu carro.
 Pieza Clave · @piezaclave.valencia
@@ -38,6 +40,7 @@ Carpeta: `juego-dados-108/`
 ```
 Juego de dados 108 piezas 1/4" y 1/2" con maletín | Entregas en Valencia
 ```
+**Precio para el campo de precio:** [completar]
 **Categoría:** Herramientas · **Estado:** Nuevo
 
 **Descripción**
@@ -56,13 +59,14 @@ Precio: [precio]
 Pieza Clave · @piezaclave.valencia
 ```
 
-## Llaves combinadas 14 piezas
+## Llaves combinadas 14 piezas — 20$
 Carpeta: `llaves-combinadas-14/`
 
-**Título** (69 caracteres)
+**Título** (84 caracteres)
 ```
-Juego de llaves combinadas 14 piezas 8 a 24 mm | Entregas en Valencia
+Juego de llaves milimétricas combinadas 8 a 24 mm (14 piezas) | Entregas en Valencia
 ```
+**Precio para el campo de precio:** 20
 **Categoría:** Herramientas · **Estado:** Nuevo
 
 **Descripción**
@@ -75,7 +79,7 @@ Llaves combinadas 14 piezas.
 • Para donde no entra la matraca
 • Ordenadas por medida en su estuche
 
-Precio: [precio]
+Precio: 20$
 📍 Valencia, Carabobo · Entregas en Valencia
 💬 Escríbenos y te decimos si le sirve a tu carro.
 Pieza Clave · @piezaclave.valencia
@@ -88,6 +92,7 @@ Carpeta: `multiplicador-fuerza/`
 ```
 Multiplicador de fuerza para tornillos de rueda con dados | Entregas en Valencia
 ```
+**Precio para el campo de precio:** [completar]
 **Categoría:** Herramientas · **Estado:** Nuevo
 
 **Descripción**
@@ -113,6 +118,7 @@ Carpeta: `compresimetro/`
 ```
 Compresímetro de motor con adaptadores y estuche | Entregas en Valencia
 ```
+**Precio para el campo de precio:** [completar]
 **Categoría:** Herramientas · **Estado:** Nuevo
 
 **Descripción**
@@ -131,13 +137,14 @@ Precio: [precio]
 Pieza Clave · @piezaclave.valencia
 ```
 
-## Manómetros de refrigeración
+## Manómetros de refrigeración — 38$
 Carpeta: `manometros-refrigeracion/`
 
-**Título** (83 caracteres)
+**Título** (85 caracteres)
 ```
-Juego de manómetros de refrigeración para aire acondicionado | Entregas en Valencia
+Reloj de refrigeración (manómetros) con mangueras y conexiones | Entregas en Valencia
 ```
+**Precio para el campo de precio:** 38
 **Categoría:** Herramientas · **Estado:** Nuevo
 
 **Descripción**
@@ -149,8 +156,9 @@ Manómetros de refrigeración.
 • Para cargar gas del aire acondicionado
 • Diagnóstico de alta y de baja
 • Aire acondicionado y refrigeración
+• Incluye sus mangueras y sus conexiones
 
-Precio: [precio]
+Precio: 38$
 📍 Valencia, Carabobo · Entregas en Valencia
 💬 Escríbenos y te armamos el presupuesto para tu taller.
 Pieza Clave · @piezaclave.valencia
@@ -163,6 +171,7 @@ Carpeta: `engrasadora-400cc/`
 ```
 Engrasadora manual 400 cc con manguera | Entregas en Valencia
 ```
+**Precio para el campo de precio:** [completar]
 **Categoría:** Herramientas · **Estado:** Nuevo
 
 **Descripción**
@@ -181,13 +190,14 @@ Precio: [precio]
 Pieza Clave · @piezaclave.valencia
 ```
 
-## Adaptadores de impacto 8 piezas
+## Adaptadores de impacto 8 piezas — 20$
 Carpeta: `adaptadores-impacto/`
 
-**Título** (64 caracteres)
+**Título** (71 caracteres)
 ```
-Adaptadores de impacto 8 piezas 1/4" a 1" | Entregas en Valencia
+Kit de adaptadores de impacto 8 piezas 1/4" a 1" | Entregas en Valencia
 ```
+**Precio para el campo de precio:** 20
 **Categoría:** Herramientas · **Estado:** Nuevo
 
 **Descripción**
@@ -200,7 +210,7 @@ Adaptadores de impacto 8 piezas.
 • Acero negro para impacto
 • En su estuche
 
-Precio: [precio]
+Precio: 20$
 📍 Valencia, Carabobo · Entregas en Valencia
 💬 Escríbenos y te armamos el presupuesto para tu taller.
 Pieza Clave · @piezaclave.valencia
@@ -213,6 +223,7 @@ Carpeta: `polipasto-electrico/`
 ```
 Polipasto eléctrico con botonera | Entregas en Valencia
 ```
+**Precio para el campo de precio:** [completar]
 **Categoría:** Herramientas · **Estado:** Nuevo
 
 **Descripción**
@@ -238,6 +249,7 @@ Carpeta: `cortadora-cesped/`
 ```
 Cortadora de césped a gasolina con bolsa | Entregas en Valencia
 ```
+**Precio para el campo de precio:** [completar]
 **Categoría:** Jardín y exteriores · **Estado:** Nuevo
 
 **Descripción**
@@ -263,6 +275,7 @@ Carpeta: `desmalezadora/`
 ```
 Desmalezadora a gasolina con cuchilla, nylon y arnés | Entregas en Valencia
 ```
+**Precio para el campo de precio:** [completar]
 **Categoría:** Jardín y exteriores · **Estado:** Nuevo
 
 **Descripción**
@@ -288,6 +301,7 @@ Carpeta: `motosierra/`
 ```
 Motosierra a gasolina con guantes y protector | Entregas en Valencia
 ```
+**Precio para el campo de precio:** [completar]
 **Categoría:** Jardín y exteriores · **Estado:** Nuevo
 
 **Descripción**
@@ -313,6 +327,7 @@ Carpeta: `taladro-inalambrico/`
 ```
 Taladro inalámbrico con batería y maletín | Entregas en Valencia
 ```
+**Precio para el campo de precio:** [completar]
 **Categoría:** Herramientas · **Estado:** Nuevo
 
 **Descripción**
@@ -338,6 +353,7 @@ Carpeta: `esmeril-y-taladro/`
 ```
 Esmeril angular y taladro con cable | Entregas en Valencia
 ```
+**Precio para el campo de precio:** [completar]
 **Categoría:** Herramientas · **Estado:** Nuevo
 
 **Descripción**

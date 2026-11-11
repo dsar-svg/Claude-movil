@@ -11,6 +11,11 @@ PK={'gato':'gato-pack','dados':'dados-pack','moto':'moto-pack','adapt':'adapt-pa
 OLD={'adapt':'02-adaptadores-impacto','llaves':'03-llaves-combinadas-14','mano':'04-manifold-refrigeracion','taladro':'06-taladro-inalambrico',
      'engra':'08-engrasadora','compre':'09-compresimetro','multi':'10-multiplicador-torque','corta':'11-cortadora-cesped','poli':'12-polipasto-electrico',
      'esmeril':'13-esmeril-taladro','desma':'14-desmalezadora'}
+PRICE={'gato':42,'adapt':20,'llaves':20,'mano':38}  # precio al cliente en $ (los demás: precio por WhatsApp)
+def price_sticker(k,x,y,d=210,rot=-8):
+    if k not in PRICE: return ''
+    return f'''<div class="ab" style="left:{x}px;top:{y}px;width:{d}px;height:{d}px;border-radius:50%;background:{CH};box-shadow:0 14px 30px rgba(0,0,0,.25);transform:rotate({rot}deg);display:flex;flex-direction:column;align-items:center;justify-content:center;border:6px solid #fff">
+<div style="font:700 24px/1 BC;letter-spacing:.14em;text-transform:uppercase;color:{GR}">Precio</div><div class="ax" style="font-size:{int(d*0.36)}px;color:#fff;letter-spacing:-2px;margin-top:6px">{PRICE[k]}$</div></div>'''
 def src(k):
     f=PK[k]
     if not os.path.exists(CUTD+f+'.png'): f=OLD[k]
@@ -152,7 +157,7 @@ def ficha(n,T,name,sub,tagtxt,k,box,specs,desc,i,tot,nsize=150,rot=0):
 <div class="ab" style="left:40px;right:40px;top:130px"><div class="ax fit" style="font-size:{nsize}px;color:{T["ink"]};white-space:nowrap">{name}</div>
 <div class="aw" style="font-size:58px;color:{T["sub"] if T["k"]!="pro" else "#c9d6d9"};margin-top:10px">{sub}</div>
 {f'<div class="tag" style="background:{T["acc"] if T["k"]!="ele" else GR};margin-top:18px"><span class="aw" style="font-size:44px;color:{"#fff" if T["k"]!="ele" else VO}">{tagtxt}</span></div>' if tagtxt else ''}</div>
-{prod(k,l,t,w,h,rot)}
+{prod(k,l,t,w,h,rot)}{price_sticker(k,820,450)}
 {specrow(T,specs,1000)}
 <div class="ab" style="left:40px;right:40px;top:1150px;font:500 28px/1.35 B;color:{T["ink"] if T["k"]!="ext" else "#fff"}">{desc}</div>
 <div class="ab" style="right:40px;bottom:36px">{iso(T,44) if T["k"]!="ext" else f'<img src="{LG}isotipo-negativo.svg" style="height:44px">'}</div>''',T)
