@@ -2,13 +2,12 @@
 
 | Archivo | Qué es |
 |---|---|
-| `reel-gato-A.mp4` | Versión A, 15,5 s, 1080 × 1920. Gancho: "¿Todavía con el gato de tijera?" |
-| `reel-gato-B.mp4` | Versión B, igual pero con el gancho "¿Se te espichó un caucho?" |
-| `tomas/` | Las 4 tomas de video sin texto (Kling 3.0 Pro en ElevenLabs), por si quieres reeditar en CapCut. |
-| `fotogramas/` | Los fotogramas clave (GPT Image 2.6) desde los que se animaron las tomas. |
-| `musica.mp3`, `sfx-bombeo.mp3` | Música instrumental y efecto del bombeo (ElevenLabs). |
-| `edit_reel.py` | Script de ffmpeg que arma el reel: espera `clips/v1..v4.mp4`, `ov/*.png` y `audio/` junto a él. |
-
-Cómo se hizo: el gato y su estuche salen de la foto real del producto. Primero se generaron fotogramas fieles al producto en el mismo garaje y luego Kling animó entre ellos (inicio y final fijos), para que el gato no cambie durante el movimiento.
+| `reel-gato-A.mp4` | Versión A, 17,5 s, 1080 × 1920, con voz. Gancho: "¿Todavía cambiando el caucho con el gato de tijera?" |
+| `reel-gato-B.mp4` | Versión B, 18,7 s. Gancho: "¿Se te espichó un caucho y el gato de tijera no sube?" |
+| `tomas/` | Las tomas sin texto: gancho, gato entra, bombeo de perfil (Veo 3.1), maleta (Kling 3.0 Pro). |
+| `fotogramas/` | Fotogramas clave fieles al producto (GPT Image 2.6) desde los que se animó cada toma. |
+| `audio/` | Voz en off (ElevenLabs v4, voz "Fernando"), música, efectos y `tiempos-voz.json` con el tiempo de cada palabra. |
+| `editor.py` | Compositor cuadro a cuadro (Python + ffmpeg): subtítulos palabra por palabra, sello ✕, insignia 2 t, barra de altura animada, check, cierre con botón de WhatsApp, música que baja bajo la voz. |
+| `v1-sin-voz/` | La primera versión, sin voz y con el bombeo frontal. |
 
 Antes de publicar: activa la etiqueta "Información de IA" en Instagram y revisa que el gato se vea igual al que entregas.
