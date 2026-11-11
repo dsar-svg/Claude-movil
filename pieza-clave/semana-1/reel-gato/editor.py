@@ -1,4 +1,4 @@
-# Reel del gato: compositor v3 (copia de trabajo). Espera clips/, ov/, audio/ y words.json junto a él; ver README.
+# Reel del gato: compositor v4 (copia de trabajo). Espera clips/, ov/, audio/ y words.json junto a él; ver README.
 """Edición v2 del reel del gato: python3 edit2.py A|B salida.mp4
 Compositor cuadro a cuadro (PIL + numpy) sincronizado con la voz."""
 import sys, os, json, math, subprocess
@@ -38,7 +38,8 @@ def load(path, start, dur, speed=None):
     for i in range(n):
         idx=min(len(fr)-1,int((start+i/FPS*sp)*fps)); out.append(cv2.resize(fr[idx],(W,H),interpolation=cv2.INTER_AREA))
     return out
-SH=[('clips/v1.mp4',0.2,0,T_V2,None),('clips/v2c.mp4',0.0,T_V2,T_V3,'fit'),('clips/v3b.mp4',0.05,T_V3,T_V4,'fit'),('clips/v4.mp4',0.4,T_V4,T_END,None)]
+T_2B=wt('lo')-0.05
+SH=[('clips/v1c.mp4',0.0,0,T_V2,None),('clips/hero.mp4',0.0,T_V2,T_2B,'fit'),('clips/v2d.mp4',0.1,T_2B,T_V3,(1.85-0.1)/(T_V3-T_2B)),('clips/v3b.mp4',0.05,T_V3,T_V4,'fit'),('clips/v4.mp4',0.4,T_V4,T_END,None)]
 shots=[(a,b,load(p,ss,b-a,sp)) for p,ss,a,b,sp in SH]
 endbg=np.array(Image.open('/home/user/Claude-movil/pieza-clave/semana-1/escenas-ia/gato916b.jpg').convert('RGB').resize((W,H)))
 
@@ -127,7 +128,7 @@ def caption(base,t):
             for (wd,s,e),tok,wi in zip(g,toks,widths):
                 col=CHISPA if s-0.03<=t<=e+0.08 else BLANCO
                 d.text((x,h/2),tok,font=CF,fill=col,anchor='lm'); x+=wi+gap
-            k=clamp((t-(g[0][1]-0.05))/0.12); paste(base,pill,W/2,1420+(1-ease_out(k))*30,1.0,k)
+            k=clamp((t-(g[0][1]-0.05))/0.12); cy=760 if T_V2<=t<T_2B else 1420; paste(base,pill,W/2,cy+(1-ease_out(k))*30,1.0,k)
             return
 
 def measure(base,t,t0,t1):
@@ -169,7 +170,7 @@ def frame(i):
     if T_V2<=t<T_V3:
         k=back(clamp((t-T_V2-0.1)/0.35)); paste(base,blk_t2,W-40-blk_t2.width*0.82/2+(1-clamp(k))*(blk_t2.width+60),250+blk_t2.height*0.82/2,0.82)
         tb=wt('toneladas')-0.05
-        if t>=tb: k=clamp((t-tb)/0.3); paste(base,BADGE,220,1610,back(k)*1.0,clamp(k*2))
+        if t>=tb: k=clamp((t-tb)/0.3); paste(base,BADGE,800,1640,back(k)*1.0,clamp(k*2))
     # shot 3: medidor
     if T_V3<=t<T_V4: measure(base,t,wt('doce'),wt('treinta',edge='end'))
     # shot 4
@@ -213,7 +214,7 @@ for i in range(n): p.stdin.write(frame(i).tobytes())
 p.stdin.close(); p.wait()
 
 # ---------- audio ----------
-ev=[('whoosh',T_V2-0.15,6),('whoosh',T_V3-0.15,4),('whoosh',T_V4-0.15,4),('whoosh',T_END-0.15,5),
+ev=[('whoosh',T_V2-0.15,6),('whoosh',T_2B-0.15,2),('whoosh',T_V3-0.15,4),('whoosh',T_V4-0.15,4),('whoosh',T_END-0.15,5),
     ('stamp',wt('tijera')+0.1,9),('pop',wt('toneladas')-0.05,3),('sfx',T_V3+0.1,12),('pop',wt('maleta'),3),('pop',wt('WhatsApp')-0.1,5)]
 inp=['-i','tmp_v2.mp4','-i',f'audio/vo{V}.mp3','-i','audio/music.mp3']; fl=[]; mix=['[vo]','[mus]']
 for j,(name,at,db) in enumerate(ev):
