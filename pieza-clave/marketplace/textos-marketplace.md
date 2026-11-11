@@ -30,6 +30,8 @@ Gato hidráulico 2 toneladas.
 Precio: 42$
 📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
 🚚 Delivery en Valencia con costo según la zona, o retiro en el local
+💵 Pago: efectivo, transferencia o pago móvil
+🛡️ Garantía de 1 mes en casi todos los productos (confírmala al escribirnos)
 💬 Escríbenos y te decimos si le sirve a tu carro.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -57,6 +59,8 @@ Juego de dados 108 piezas.
 Precio: [precio]
 📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
 🚚 Delivery en Valencia con costo según la zona, o retiro en el local
+💵 Pago: efectivo, transferencia o pago móvil
+🛡️ Garantía de 1 mes en casi todos los productos (confírmala al escribirnos)
 💬 Escríbenos y te decimos si le sirve a tu carro.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -84,6 +88,8 @@ Llaves combinadas 14 piezas.
 Precio: 20$
 📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
 🚚 Delivery en Valencia con costo según la zona, o retiro en el local
+💵 Pago: efectivo, transferencia o pago móvil
+🛡️ Garantía de 1 mes en casi todos los productos (confírmala al escribirnos)
 💬 Escríbenos y te decimos si le sirve a tu carro.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -111,6 +117,8 @@ Multiplicador de fuerza para tornillos de rueda.
 Precio: [precio]
 📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
 🚚 Delivery en Valencia con costo según la zona, o retiro en el local
+💵 Pago: efectivo, transferencia o pago móvil
+🛡️ Garantía de 1 mes en casi todos los productos (confírmala al escribirnos)
 💬 Escríbenos y te decimos si le sirve a tu carro.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -138,6 +146,8 @@ Compresímetro de motor.
 Precio: [precio]
 📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
 🚚 Delivery en Valencia con costo según la zona, o retiro en el local
+💵 Pago: efectivo, transferencia o pago móvil
+🛡️ Garantía de 1 mes en casi todos los productos (confírmala al escribirnos)
 💬 Escríbenos y te armamos el presupuesto para tu taller.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -166,6 +176,8 @@ Manómetros de refrigeración.
 Precio: 38$
 📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
 🚚 Delivery en Valencia con costo según la zona, o retiro en el local
+💵 Pago: efectivo, transferencia o pago móvil
+🛡️ Garantía de 1 mes en casi todos los productos (confírmala al escribirnos)
 💬 Escríbenos y te armamos el presupuesto para tu taller.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -193,6 +205,8 @@ Engrasadora manual 400 cc.
 Precio: [precio]
 📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
 🚚 Delivery en Valencia con costo según la zona, o retiro en el local
+💵 Pago: efectivo, transferencia o pago móvil
+🛡️ Garantía de 1 mes en casi todos los productos (confírmala al escribirnos)
 💬 Escríbenos y te armamos el presupuesto para tu taller.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -220,6 +234,8 @@ Adaptadores de impacto 8 piezas.
 Precio: 20$
 📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
 🚚 Delivery en Valencia con costo según la zona, o retiro en el local
+💵 Pago: efectivo, transferencia o pago móvil
+🛡️ Garantía de 1 mes en casi todos los productos (confírmala al escribirnos)
 💬 Escríbenos y te armamos el presupuesto para tu taller.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -247,6 +263,8 @@ Polipasto eléctrico con botonera.
 Precio: [precio]
 📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
 🚚 Delivery en Valencia con costo según la zona, o retiro en el local
+💵 Pago: efectivo, transferencia o pago móvil
+🛡️ Garantía de 1 mes en casi todos los productos (confírmala al escribirnos)
 💬 Escríbenos y te armamos el presupuesto para tu taller.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -274,6 +292,8 @@ Cortadora de césped a gasolina.
 Precio: [precio]
 📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
 🚚 Delivery en Valencia con costo según la zona, o retiro en el local
+💵 Pago: efectivo, transferencia o pago móvil
+🛡️ Garantía de 1 mes en casi todos los productos (confírmala al escribirnos)
 💬 Mándanos una foto del terreno y te decimos cuál te sirve.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -301,6 +321,8 @@ Desmalezadora a gasolina.
 Precio: [precio]
 📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
 🚚 Delivery en Valencia con costo según la zona, o retiro en el local
+💵 Pago: efectivo, transferencia o pago móvil
+🛡️ Garantía de 1 mes en casi todos los productos (confírmala al escribirnos)
 💬 Mándanos una foto del terreno y te decimos cuál te sirve.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -328,6 +350,8 @@ Motosierra a gasolina.
 Precio: [precio]
 📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
 🚚 Delivery en Valencia con costo según la zona, o retiro en el local
+💵 Pago: efectivo, transferencia o pago móvil
+🛡️ Garantía de 1 mes en casi todos los productos (confírmala al escribirnos)
 💬 Mándanos una foto del terreno y te decimos cuál te sirve.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -355,6 +379,8 @@ Taladro inalámbrico con maletín.
 Precio: [precio]
 📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
 🚚 Delivery en Valencia con costo según la zona, o retiro en el local
+💵 Pago: efectivo, transferencia o pago móvil
+🛡️ Garantía de 1 mes en casi todos los productos (confírmala al escribirnos)
 💬 Cuéntanos qué vas a hacer y te decimos cuál te sirve.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -382,6 +408,8 @@ Esmeril y taladro con cable.
 Precio: [precio]
 📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
 🚚 Delivery en Valencia con costo según la zona, o retiro en el local
+💵 Pago: efectivo, transferencia o pago móvil
+🛡️ Garantía de 1 mes en casi todos los productos (confírmala al escribirnos)
 💬 Cuéntanos qué vas a hacer y te decimos cuál te sirve.
 Pieza Clave · @piezaclave.valencia
 ```
