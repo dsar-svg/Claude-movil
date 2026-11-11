@@ -4,7 +4,7 @@ Cada producto tiene 3 imágenes en su carpeta (súbelas en este orden: 1-princip
 
 Con precio confirmado: gato 42$, adaptadores 20$, llaves 20$, reloj de refrigeración 38$. En los demás completa **[precio]** (y avísame para ponerlo también en las imágenes).
 
-Confirma el **estado** (puse "Nuevo") y que los datos coincidan con lo que tienes. Ubicación sugerida: Valencia, Carabobo.
+Confirma el **estado** (puse "Nuevo") y que los datos coincidan con lo que tienes. Ubicación de la publicación: Naguanagua, Carabobo.
 
 ## Gato hidráulico 2 toneladas — 42$
 Carpeta: `gato-hidraulico-2t/`
@@ -28,7 +28,8 @@ Gato hidráulico 2 toneladas.
 • También conocido como gato tipo caimán
 
 Precio: 42$
-📍 Valencia, Carabobo · Entregas en Valencia
+📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
+🚚 Delivery en Valencia con costo según la zona, o retiro en el local
 💬 Escríbenos y te decimos si le sirve a tu carro.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -54,7 +55,8 @@ Juego de dados 108 piezas.
 • Trae matracas, extensiones, cardán y puntas
 
 Precio: [precio]
-📍 Valencia, Carabobo · Entregas en Valencia
+📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
+🚚 Delivery en Valencia con costo según la zona, o retiro en el local
 💬 Escríbenos y te decimos si le sirve a tu carro.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -80,7 +82,8 @@ Llaves combinadas 14 piezas.
 • Ordenadas por medida en su estuche
 
 Precio: 20$
-📍 Valencia, Carabobo · Entregas en Valencia
+📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
+🚚 Delivery en Valencia con costo según la zona, o retiro en el local
 💬 Escríbenos y te decimos si le sirve a tu carro.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -106,7 +109,8 @@ Multiplicador de fuerza para tornillos de rueda.
 • Viene completo en su maletín
 
 Precio: [precio]
-📍 Valencia, Carabobo · Entregas en Valencia
+📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
+🚚 Delivery en Valencia con costo según la zona, o retiro en el local
 💬 Escríbenos y te decimos si le sirve a tu carro.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -132,7 +136,8 @@ Compresímetro de motor.
 • Para mecánicos y talleres
 
 Precio: [precio]
-📍 Valencia, Carabobo · Entregas en Valencia
+📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
+🚚 Delivery en Valencia con costo según la zona, o retiro en el local
 💬 Escríbenos y te armamos el presupuesto para tu taller.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -159,7 +164,8 @@ Manómetros de refrigeración.
 • Incluye sus mangueras y sus conexiones
 
 Precio: 38$
-📍 Valencia, Carabobo · Entregas en Valencia
+📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
+🚚 Delivery en Valencia con costo según la zona, o retiro en el local
 💬 Escríbenos y te armamos el presupuesto para tu taller.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -185,7 +191,8 @@ Engrasadora manual 400 cc.
 • Manguera para llegar a lo difícil
 
 Precio: [precio]
-📍 Valencia, Carabobo · Entregas en Valencia
+📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
+🚚 Delivery en Valencia con costo según la zona, o retiro en el local
 💬 Escríbenos y te armamos el presupuesto para tu taller.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -211,7 +218,8 @@ Adaptadores de impacto 8 piezas.
 • En su estuche
 
 Precio: 20$
-📍 Valencia, Carabobo · Entregas en Valencia
+📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
+🚚 Delivery en Valencia con costo según la zona, o retiro en el local
 💬 Escríbenos y te armamos el presupuesto para tu taller.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -237,7 +245,8 @@ Polipasto eléctrico con botonera.
 • Revisa la capacidad en la placa
 
 Precio: [precio]
-📍 Valencia, Carabobo · Entregas en Valencia
+📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
+🚚 Delivery en Valencia con costo según la zona, o retiro en el local
 💬 Escríbenos y te armamos el presupuesto para tu taller.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -263,7 +272,8 @@ Cortadora de césped a gasolina.
 • Para terreno plano
 
 Precio: [precio]
-📍 Valencia, Carabobo · Entregas en Valencia
+📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
+🚚 Delivery en Valencia con costo según la zona, o retiro en el local
 💬 Mándanos una foto del terreno y te decimos cuál te sirve.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -289,7 +299,8 @@ Desmalezadora a gasolina.
 • Trae cuchilla, nylon y arnés
 
 Precio: [precio]
-📍 Valencia, Carabobo · Entregas en Valencia
+📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
+🚚 Delivery en Valencia con costo según la zona, o retiro en el local
 💬 Mándanos una foto del terreno y te decimos cuál te sirve.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -315,7 +326,8 @@ Motosierra a gasolina.
 • Trae guantes y protector de espada
 
 Precio: [precio]
-📍 Valencia, Carabobo · Entregas en Valencia
+📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
+🚚 Delivery en Valencia con costo según la zona, o retiro en el local
 💬 Mándanos una foto del terreno y te decimos cuál te sirve.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -341,7 +353,8 @@ Taladro inalámbrico con maletín.
 • Viene completo en su maletín
 
 Precio: [precio]
-📍 Valencia, Carabobo · Entregas en Valencia
+📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
+🚚 Delivery en Valencia con costo según la zona, o retiro en el local
 💬 Cuéntanos qué vas a hacer y te decimos cuál te sirve.
 Pieza Clave · @piezaclave.valencia
 ```
@@ -367,7 +380,8 @@ Esmeril y taladro con cable.
 • Los dos con sus manuales
 
 Precio: [precio]
-📍 Valencia, Carabobo · Entregas en Valencia
+📍 Calle 181, Naguanagua, Carabobo (Multitienda JM)
+🚚 Delivery en Valencia con costo según la zona, o retiro en el local
 💬 Cuéntanos qué vas a hacer y te decimos cuál te sirve.
 Pieza Clave · @piezaclave.valencia
 ```

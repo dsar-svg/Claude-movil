@@ -10,6 +10,7 @@ Meta exige que una persona real cree y verifique las cuentas (correo, teléfono,
 3. Descripción: `Herramientas para el carro, el taller y el patio. Valencia, Carabobo. Escríbenos y te decimos cuál te sirve. Entregas en Valencia.`
 4. Foto de perfil: `../logo-v2/foto-perfil.png` · Portada: `portada-facebook.png` (esta carpeta).
 5. Botón de acción: **Enviar mensaje de WhatsApp** con el número de la tienda.
+6. Ubicación: `Calle 181, Naguanagua, Carabobo` (en Google Maps aparece como *Multitienda JM*: https://maps.app.goo.gl/8KeBiwpumrtoUD416). Delivery: costo según la zona.
 
 ### b) Instagram @piezaclave.valencia
 1. Crea la cuenta con el correo de la tienda; usuario `piezaclave.valencia`.
@@ -33,7 +34,7 @@ Las publicaciones de Marketplace salen de **tu perfil personal** (Meta no deja p
 1. **Marketplace → Crear publicación → Artículo en venta**.
 2. Sube las 3 imágenes de `../marketplace/<producto>/` en orden (1, 2, 3).
 3. Pega título, precio, categoría y descripción de `../marketplace/textos-marketplace.md`.
-4. Ubicación: Valencia. Publica.
+4. Ubicación: Naguanagua, Carabobo. Publica.
 
 ## 2. Lo que se automatiza
 
