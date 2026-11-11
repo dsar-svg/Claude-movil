@@ -15,7 +15,7 @@ Meta exige que una persona real cree y verifique las cuentas (correo, teléfono,
 1. Crea la cuenta con el correo de la tienda; usuario `piezaclave.valencia`.
 2. **Configuración → Tipo de cuenta → Cuenta profesional → Empresa**, categoría "Tienda de herramientas".
 3. Foto: `../logo-v2/foto-perfil.png`.
-4. Biografía (cópiala tal cual, 128 caracteres):
+4. Biografía (cópiala tal cual, 125 caracteres):
    ```
    🔧 Taller · Taller pro · 🌱 Exterior · ⚡ Eléctricas
    📍 Valencia, Carabobo · 🚚 Entregas
