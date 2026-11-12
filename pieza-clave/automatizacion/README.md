@@ -16,6 +16,7 @@
 
 ## Lo que sigue siendo manual
 - **Marketplace:** Meta no permite publicarlo por programa. Usa el kit de `../marketplace/`.
+- **Imágenes nuevas:** súbelas al repositorio (push) antes de su hora; el publicador usa el último commit publicado en la rama.
 - **Historias con stickers** (encuestas, enlaces, preguntas): la API no los pone. Están marcadas `"manual": true`.
 - **Reels sin video todavía:** el del local (lunes) y el del multiplicador (viernes).
 

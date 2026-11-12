@@ -27,7 +27,17 @@ CAL = AQUI / "calendario.json"
 ESTADO = AQUI / "estado" / "publicados.json"
 MEDIA = AQUI / "media"
 API = f"https://graph.facebook.com/{CFG['version_api']}"
-RAW = f"https://raw.githubusercontent.com/{CFG['repo']}/{CFG['rama']}/pieza-clave/"
+def _version():
+    """Commit actual: URLs fijas por versión (Meta guarda en caché las URLs que fallaron)."""
+    import subprocess
+    try:
+        return subprocess.run(["git", "-C", str(AQUI), "rev-parse", "origin/" + CFG["rama"]], capture_output=True,
+                              text=True, check=True).stdout.strip() or CFG["rama"]
+    except Exception:
+        return CFG["rama"]
+
+
+RAW = f"https://raw.githubusercontent.com/{CFG['repo']}/{_version()}/pieza-clave/"
 VE = dt.timezone(dt.timedelta(hours=-4))
 VENTANA_H = 12        # si se pasó la hora por más de esto, no se publica sola
 S = requests.Session()
