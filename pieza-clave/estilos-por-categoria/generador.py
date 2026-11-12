@@ -1,4 +1,3 @@
-# Generador de posts por categoría (copia de trabajo; las rutas apuntan al scratchpad de la sesión).
 import json, os
 # v5: un estilo por categoría (Taller, Taller pro, Exterior, Eléctricas, Marca) con formatos comunes
 SP='/tmp/claude-0/-home-user-Claude-movil/59907f33-5efd-5727-b54e-ecaa26a4f53b/scratchpad'
@@ -11,7 +10,8 @@ PK={'gato':'gato-pack','dados':'dados-pack','moto':'moto-pack','adapt':'adapt-pa
 OLD={'adapt':'02-adaptadores-impacto','llaves':'03-llaves-combinadas-14','mano':'04-manifold-refrigeracion','taladro':'06-taladro-inalambrico',
      'engra':'08-engrasadora','compre':'09-compresimetro','multi':'10-multiplicador-torque','corta':'11-cortadora-cesped','poli':'12-polipasto-electrico',
      'esmeril':'13-esmeril-taladro','desma':'14-desmalezadora'}
-PRICE={'gato':42,'adapt':20,'llaves':20,'mano':38}  # precio al cliente en $ (los demás: precio por WhatsApp)
+PRICE={'gato':42,'adapt':20,'llaves':20,'mano':38,'compre':20,'taladro':40}  # precio al cliente en $ (los demás: se pregunta por mensaje)
+PK.update({'compre':'compre2-real','taladro':'taladro2-real'})
 def price_sticker(k,x,y,d=210,rot=-8):
     if k not in PRICE: return ''
     return f'''<div class="ab" style="left:{x}px;top:{y}px;width:{d}px;height:{d}px;border-radius:50%;background:{CH};box-shadow:0 14px 30px rgba(0,0,0,.25);transform:rotate({rot}deg);display:flex;flex-direction:column;align-items:center;justify-content:center;border:6px solid #fff">
@@ -76,7 +76,7 @@ def I(name,c):
     'pago':'<rect x="6" y="14" width="52" height="36" rx="4"/><path d="M6 24H58M14 40H26"/>',
     }
     return f'<svg class="ico" viewBox="0 0 64 64" fill="none" stroke="{c}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">{P[name]}</svg>'
-WA='<svg width="44" height="44" viewBox="0 0 32 32"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-3.9-.5-5.6-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8 1 3.9.8a3.3 3.3 0 0 0 2.1-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.1-.3-.2-.6-.4z"/></svg>'
+WA='<svg width="44" height="44" viewBox="0 0 32 32"><path fill="currentColor" d="M16 3C8.8 3 3 8.4 3 15.1c0 3.8 1.9 7.2 4.9 9.4V30l4.5-2.5c1.1.3 2.3.5 3.6.5 7.2 0 13-5.4 13-12.1S23.2 3 16 3zm1.3 16.3l-3.3-3.5-6.5 3.5 7.1-7.6 3.4 3.5 6.4-3.5-7.1 7.6z"/></svg>'
 
 # ---------- temas por categoría ----------
 def deco_taller(w,h,T):
@@ -126,7 +126,7 @@ def head(T,n=None,tot=None,left=None):
 def prod(k,l,t,w,h,rot=0,shadow=True):
     sh=f'<div class="shadow" style="left:{l+w*0.12}px;top:{t+h*0.88}px;width:{w*0.76}px;height:{h*0.12}px"></div>' if shadow else ''
     return sh+f'<img class="prod" src="{src(k)}" style="left:{l}px;top:{t}px;width:{w}px;height:{h}px;transform:rotate({rot}deg)">'
-def wa_pill(T,txt='Escríbenos por WhatsApp'):
+def wa_pill(T,txt='Escríbenos por mensaje'):
     bg,fg=(CH,GR) if T['k']!='ele' else (GR,VO)
     if T['k']=='ext': bg,fg=('#fff',EX)
     return f'<span class="pill" style="background:{bg};color:{fg}">{WA}{txt}</span>'
@@ -224,14 +224,14 @@ portada('lun-3-cc-1-portada',T_MARCA,'Cómo comprar en Pieza Clave','Comprar<br>
 put('lun-3-cc-2-pasos', f'''{head(T_MARCA,2,4,badge(T_MARCA))}
 <div class="ab ax" style="left:40px;right:40px;top:130px;font-size:96px;color:{AC}">Tres pasos.<br><span style="color:{CH}">Y listo.</span></div>
 <div class="ab" style="left:40px;right:40px;top:420px;display:grid;gap:20px">
-{''.join(f'<div style="background:#fff;border-radius:10px;padding:30px 34px;display:grid;grid-template-columns:96px 70px 1fr;gap:22px;align-items:center;box-shadow:0 12px 26px rgba(0,0,0,.08)"><div class="num" style="color:{CH};font-size:110px">{j}</div>{I(ic,AC)}<div><div class="bc" style="font-size:46px;color:{AC}">{t}</div><div style="font:500 28px/1.35 B;color:#5b6b70;margin-top:8px">{d}</div></div></div>' for j,ic,t,d in [(1,'chat','Escríbenos','Por WhatsApp o mensaje directo. Dinos qué necesitas o qué carro tienes.'),(2,'check','Te confirmamos','Precio, disponibilidad y cuál te sirve. Si no es lo que buscas, te lo decimos.'),(3,'camion','Te lo llevamos','Coordinamos la entrega en Valencia o pasas por el local.')])}
+{''.join(f'<div style="background:#fff;border-radius:10px;padding:30px 34px;display:grid;grid-template-columns:96px 70px 1fr;gap:22px;align-items:center;box-shadow:0 12px 26px rgba(0,0,0,.08)"><div class="num" style="color:{CH};font-size:110px">{j}</div>{I(ic,AC)}<div><div class="bc" style="font-size:46px;color:{AC}">{t}</div><div style="font:500 28px/1.35 B;color:#5b6b70;margin-top:8px">{d}</div></div></div>' for j,ic,t,d in [(1,'chat','Escríbenos','Por mensaje en Instagram o Messenger. Lun a sáb, 8 a. m. a 5 p. m.'),(2,'check','Te confirmamos','Precio, disponibilidad y cuál te sirve. Si no es lo que buscas, te lo decimos.'),(3,'camion','Te lo llevamos','Coordinamos la entrega en Valencia o pasas por el local.')])}
 </div>{foot_next(T_MARCA)}''',T_MARCA)
 put('lun-3-cc-3-pagos-entregas-PLANTILLA', f'''{head(T_MARCA,3,4,badge(T_MARCA))}
 <div class="ab ax" style="left:40px;right:40px;top:130px;font-size:96px;color:{AC}">Pagos, entregas<br><span style="color:{CH}">y garantía</span></div>
 <div class="ab" style="left:40px;right:40px;top:420px;display:grid;grid-template-columns:1fr 1fr;gap:20px">
-{''.join(f'<div style="background:#fff;border-radius:10px;padding:30px;display:grid;gap:14px;box-shadow:0 12px 26px rgba(0,0,0,.08)">{I(ic,CH)}<div class="bc" style="font-size:46px;color:{AC}">{t}</div><div style="font:500 26px/1.35 B;color:#5b6b70">{d}</div><span class="tag" style="background:{VO};justify-self:start"><span class="lab" style="color:{GR};font-size:20px">Por confirmar</span></span></div>' for ic,t,d in [('pago','Formas de pago','[Efectivo en dólares · Pago móvil · Zelle · …]'),('camion','Entregas','[Zonas de Valencia y costo]'),('escudo','Garantía','[Tiempo y qué cubre]'),('pin','El local','[Dirección o zona · Horario]')])}
+{''.join(f'<div style="background:#fff;border-radius:10px;padding:30px;display:grid;gap:14px;box-shadow:0 12px 26px rgba(0,0,0,.08)">{I(ic,CH)}<div class="bc" style="font-size:46px;color:{AC}">{t}</div><div style="font:500 26px/1.35 B;color:#5b6b70">{d}</div>{f'<span class="tag" style="background:{VO};justify-self:start"><span class="lab" style="color:{GR};font-size:20px">Por confirmar</span></span>' if '[' in d else ''}</div>' for ic,t,d in [('pago','Formas de pago','Efectivo, transferencia o pago móvil.'),('camion','Delivery','Costo según la zona. Pregúntanos por mensaje.'),('escudo','Garantía','1 mes en casi todos los productos. Pregunta por el tuyo.'),('pin','El local','Multitienda JM · Calle 181, Naguanagua. Lun a sáb, 8 a. m. a 5 p. m.')])}
 </div>{foot_next(T_MARCA)}''',T_MARCA)
-cta('lun-3-cc-4-cta',T_MARCA,'Ya sabes cómo comprar.','¿Qué te<br><em>falta?</em>','Escríbenos y te decimos cuál te sirve. El enlace a WhatsApp está en el perfil.',
+cta('lun-3-cc-4-cta',T_MARCA,'Ya sabes cómo comprar.','¿Qué te<br><em>falta?</em>','Escríbenos por Instagram o Messenger y te decimos cuál te sirve. Lun a sáb, 8 a. m. a 5 p. m.',
     [('compre',(560,830,460,420)),('adapt',(800,960,240,300))],4,4,size=170)
 
 # Martes: carrusel del gato (Taller)
@@ -310,7 +310,7 @@ ficha('sab-3-desmalezadora',T_EXT,'Desmalezadora','a gasolina','Monte alto','des
 ficha('sab-4-motosierra',T_EXT,'Motosierra','a gasolina','Ramas y troncos','moto',(80,430,920,545),
       [('gas','Gasolina','Motor'),('escudo','Guantes','Incluidos'),('estuche','Protector','De espada')],
       'Úsala con lentes y botas. Para ramas gruesas y troncos.',4,5,nsize=124,rot=-10)
-cta('sab-5-cta',T_EXT,'Mándanos una foto del patio o la parcela.','Cuéntanos<br>tu terreno.<br><em>Te decimos cuál.</em>','Por WhatsApp te recomendamos la que va con ese trabajo.',
+cta('sab-5-cta',T_EXT,'Mándanos una foto del patio o la parcela.','Cuéntanos<br>tu terreno.<br><em>Te decimos cuál.</em>','Por mensaje te recomendamos la que va con ese trabajo.',
     [('corta',(600,820,300,375)),('moto',(640,1020,400,236))],5,5,size=112)
 
 # Domingo: historias

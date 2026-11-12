@@ -90,7 +90,7 @@ def token_pagina():
 
 def jpg_de(rel):
     """Instagram solo acepta JPG: devuelve la ruta del JPG en media/."""
-    return MEDIA / (Path(rel).stem + ".jpg")
+    return MEDIA / (str(Path(rel).with_suffix("")).replace("/", "__") + ".jpg")
 
 
 def preparar():
