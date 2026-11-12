@@ -1,0 +1,17 @@
+{
+  "_nota": "Identificadores de Meta de Pieza Clave. No son secretos. El token NO va aquí: lo inyecta el proxy del entorno.",
+  "version_api": "v23.0",
+  "zona_horaria": "America/Caracas",
+  "repo": "dsar-svg/Claude-movil",
+  "rama": "claude/mechanical-store-instagram-branding-hipeeb",
+  "portafolio_id": "2328781627961328",
+  "pagina_id": "1461244627067606",
+  "instagram_id": "17841474262251075",
+  "instagram_usuario": "piezaclave.valencia",
+  "cuenta_publicitaria_id": "act_1658976059028048",
+  "catalogo_id": "1176344954834105",
+  "app_id": "1082100691548588",
+  "usuario_sistema_id": "61596382655854",
+  "publico_guardado_id": "120252543252370294",
+  "campana_gato_borrador_id": "120252543284910294"
+}

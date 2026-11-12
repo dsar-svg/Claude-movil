@@ -1,0 +1,195 @@
+{
+  "_nota": "Fechas en hora de Venezuela (-04:00). manual=true: no se publica sola. Edita textos aquí; el publicador lee este archivo.",
+  "publicaciones": [
+    {
+      "id": "s1-lun-gato",
+      "fecha": "2026-11-16T12:30:00-04:00",
+      "tipo": "imagen",
+      "archivos": [
+        "semana-1/posts/lun-2-pieza-clave-gato.png"
+      ],
+      "plataformas": [
+        "instagram",
+        "facebook"
+      ],
+      "texto": "Esto es Pieza Clave. Herramientas para el carro, el taller y el patio, en Valencia.\nLlevamos tiempo vendiendo por Marketplace y ahora estamos aquí, para mostrarte lo que tenemos y decirte cuál te sirve.\n🔧 Escríbenos por WhatsApp o por mensaje directo.\n\n📍 Calle 181, Naguanagua · 🚚 Delivery según la zona\n💳 Efectivo, transferencia o pago móvil\n\n#herramientas #mecanicaautomotriz #taller #valenciacarabobo #carabobo #herramientasvalencia"
+    },
+    {
+      "id": "s1-lun-reel-local",
+      "fecha": "2026-11-16T12:30:00-04:00",
+      "tipo": "reel",
+      "archivos": [],
+      "plataformas": [
+        "instagram",
+        "facebook"
+      ],
+      "manual": true,
+      "nota": "Falta el video real del local (5 tomas de 3 s). Cuando lo tengas, súbelo a semana-1/reel-local/ y se programa."
+    },
+    {
+      "id": "s1-lun-como-comprar",
+      "fecha": "2026-11-16T19:30:00-04:00",
+      "tipo": "carrusel",
+      "archivos": [
+        "semana-1/posts/lun-3-cc-1-portada.png",
+        "semana-1/posts/lun-3-cc-2-pasos.png",
+        "semana-1/posts/lun-3-cc-3-pagos-entregas.png",
+        "semana-1/posts/lun-3-cc-4-cta.png"
+      ],
+      "plataformas": [
+        "instagram",
+        "facebook"
+      ],
+      "texto": "¿Cómo comprar en Pieza Clave?\n1. Escríbenos por WhatsApp o por mensaje directo y dinos qué necesitas.\n2. Te confirmamos precio y disponibilidad.\n3. Pagas en efectivo, transferencia o pago móvil.\n4. Te lo llevamos (delivery con costo según la zona) o lo retiras en Calle 181, Naguanagua (Multitienda JM).\nGarantía de 1 mes en casi todos los productos. 🔧\n\n#herramientas #mecanicaautomotriz #taller #valenciacarabobo #carabobo #herramientasvalencia"
+    },
+    {
+      "id": "s1-mar-carrusel-gato",
+      "fecha": "2026-11-17T19:30:00-04:00",
+      "tipo": "carrusel",
+      "archivos": [
+        "semana-1/posts/mar-1-portada.png",
+        "semana-1/posts/mar-2-tijera-vs-patin.png",
+        "semana-1/posts/mar-3-este-gato.png",
+        "semana-1/posts/mar-4-seguridad.png",
+        "semana-1/posts/mar-5-cta.png"
+      ],
+      "plataformas": [
+        "instagram",
+        "facebook"
+      ],
+      "texto": "El gato de tijera que viene con el carro sirve para salir de un apuro. Para cambiar cauchos en casa o trabajar con calma, un gato de patín es más firme y más rápido.\nY si te vas a meter debajo del carro: burros, siempre.\n¿Qué carro tienes? Escríbenos y te decimos si este gato te sirve. Precio: 42$.\n\n📍 Calle 181, Naguanagua · 🚚 Delivery según la zona\n💳 Efectivo, transferencia o pago móvil\n\n#herramientas #mecanicaautomotriz #taller #valenciacarabobo #carabobo #herramientasvalencia"
+    },
+    {
+      "id": "s1-mie-reel-gato",
+      "fecha": "2026-11-18T19:30:00-04:00",
+      "tipo": "reel",
+      "archivos": [
+        "semana-1/reel-gato/reel-gato-A.mp4"
+      ],
+      "plataformas": [
+        "instagram",
+        "facebook"
+      ],
+      "texto": "Cambiar un caucho con el gato de tijera es lento y se tambalea. Este gato hidráulico de 2 toneladas sube de 12,5 a 30 cm bombeando la palanca, trae su estuche y cabe en la maleta.\nPrecio: 42$ · Garantía de 1 mes.\nEscríbenos por WhatsApp y te lo apartamos.\n\n📍 Calle 181, Naguanagua · 🚚 Delivery según la zona\n💳 Efectivo, transferencia o pago móvil\n\n#herramientas #mecanicaautomotriz #taller #valenciacarabobo #carabobo #herramientasvalencia",
+      "portada": "semana-1/posts/mie-1-portada-reel-anuncio.png"
+    },
+    {
+      "id": "s1-mie-historia-gato",
+      "fecha": "2026-11-18T20:00:00-04:00",
+      "tipo": "historia",
+      "archivos": [
+        "semana-1/posts/mie-2-cierre-reel-anuncio.png"
+      ],
+      "plataformas": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "s1-jue-carrusel-dados",
+      "fecha": "2026-11-19T19:30:00-04:00",
+      "tipo": "carrusel",
+      "archivos": [
+        "semana-1/posts/jue-1-portada.png",
+        "semana-1/posts/jue-2-encastres.png",
+        "semana-1/posts/jue-3-llaves.png",
+        "semana-1/posts/jue-4-cta.png"
+      ],
+      "plataformas": [
+        "instagram",
+        "facebook"
+      ],
+      "texto": "¿Qué trae un juego de 108 piezas? Dados de 1/4\" para tornillos chicos, de 1/2\" para los duros, dos matracas, extensiones, cardán y puntas.\nY para donde no entra la matraca: llaves milimétricas de 8 a 24 mm.\nDinos qué carro tienes y qué le vas a hacer. Te decimos cuál te sirve, sin venderte de más.\nLlaves 8 a 24 mm: 20$ · Juego de 108: pregúntanos el precio.\n\n📍 Calle 181, Naguanagua · 🚚 Delivery según la zona\n💳 Efectivo, transferencia o pago móvil\n\n#herramientas #mecanicaautomotriz #taller #valenciacarabobo #carabobo #herramientasvalencia"
+    },
+    {
+      "id": "s1-vie-reel-multiplicador",
+      "fecha": "2026-11-20T19:30:00-04:00",
+      "tipo": "reel",
+      "archivos": [],
+      "plataformas": [
+        "instagram",
+        "facebook"
+      ],
+      "manual": true,
+      "nota": "El reel del multiplicador aún no está producido (solo la portada vie-1)."
+    },
+    {
+      "id": "s1-sab-carrusel-exterior",
+      "fecha": "2026-11-21T12:30:00-04:00",
+      "tipo": "carrusel",
+      "archivos": [
+        "semana-1/posts/sab-1-portada.png",
+        "semana-1/posts/sab-2-cortadora.png",
+        "semana-1/posts/sab-3-desmalezadora.png",
+        "semana-1/posts/sab-4-motosierra.png",
+        "semana-1/posts/sab-5-cta.png"
+      ],
+      "plataformas": [
+        "instagram",
+        "facebook"
+      ],
+      "texto": "¿Grama, monte o ramas?\nCortadora para grama pareja. Desmalezadora para monte alto y orillas. Motosierra para ramas y troncos.\nMándanos una foto de tu terreno por WhatsApp y te decimos cuál te sirve. 🌱\nEscríbenos y te pasamos el precio de cada una.\n\n📍 Calle 181, Naguanagua · 🚚 Delivery según la zona\n💳 Efectivo, transferencia o pago móvil\n\n#jardineria #desmalezadora #herramientas #valenciacarabobo #carabobo #herramientasvalencia"
+    },
+    {
+      "id": "s1-dom-historia-taller-pro",
+      "fecha": "2026-11-22T12:30:00-04:00",
+      "tipo": "historia",
+      "archivos": [
+        "semana-1/posts/dom-1-historia-taller-pro.png"
+      ],
+      "plataformas": [
+        "instagram",
+        "facebook"
+      ]
+    },
+    {
+      "id": "s1-dom-historia-encuesta",
+      "fecha": "2026-11-22T13:00:00-04:00",
+      "tipo": "historia",
+      "archivos": [
+        "semana-1/posts/dom-2-historia-encuesta.png"
+      ],
+      "plataformas": [
+        "instagram",
+        "facebook"
+      ],
+      "manual": true,
+      "nota": "Lleva sticker de encuesta (Compresímetro / Manómetros de A/C); la API de Meta no permite stickers, se sube desde la app."
+    },
+    {
+      "id": "s2-mar-carrusel-taller-pro",
+      "fecha": "2026-11-24T19:30:00-04:00",
+      "tipo": "carrusel",
+      "archivos": [
+        "semana-2/posts/tp-1-portada.png",
+        "semana-2/posts/tp-2-compresimetro.png",
+        "semana-2/posts/tp-3-manometros-ac.png",
+        "semana-2/posts/tp-4-engrasadora.png",
+        "semana-2/posts/tp-5-adaptadores.png",
+        "semana-2/posts/tp-6-polipasto.png",
+        "semana-2/posts/tp-7-cta.png"
+      ],
+      "plataformas": [
+        "instagram",
+        "facebook"
+      ],
+      "texto": "¿Tienes taller? Esto no lo trae un juego de casa.\nCompresímetro para encontrar el cilindro que falla, manómetros para el aire acondicionado, engrasadora para rótulas y crucetas, adaptadores de impacto de 1/4\" a 1\" y polipasto eléctrico para subir peso con un botón.\nReloj de refrigeración con mangueras: 38$ · Kit de adaptadores de impacto: 20$.\nEscríbenos la lista de lo que necesitas y te pasamos todo en un solo presupuesto.\n\n📍 Calle 181, Naguanagua · 🚚 Delivery según la zona\n💳 Efectivo, transferencia o pago móvil\n\n#tallermecanico #mecanicaautomotriz #refrigeracion #herramientas #valenciacarabobo #herramientasvalencia"
+    },
+    {
+      "id": "s2-jue-carrusel-electricas",
+      "fecha": "2026-11-26T19:30:00-04:00",
+      "tipo": "carrusel",
+      "archivos": [
+        "semana-2/posts/el-1-portada.png",
+        "semana-2/posts/el-2-taladro-inalambrico.png",
+        "semana-2/posts/el-3-esmeril-taladro.png",
+        "semana-2/posts/el-4-cta.png"
+      ],
+      "plataformas": [
+        "instagram",
+        "facebook"
+      ],
+      "texto": "¿Con batería o con cable?\nEl taladro inalámbrico va a donde no llega un enchufe. El combo de esmeril y taladro con cable aguanta trabajo continuo.\nDinos qué vas a hacer y te decimos cuál te sirve. Escríbenos y te pasamos el precio.\n\n📍 Calle 181, Naguanagua · 🚚 Delivery según la zona\n💳 Efectivo, transferencia o pago móvil\n\n#herramientaselectricas #taladro #esmeril #herramientas #valenciacarabobo #herramientasvalencia"
+    }
+  ]
+}
