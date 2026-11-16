@@ -256,7 +256,9 @@ def cmd_estado(_):
     est, ahora = leer_estado(), dt.datetime.now(VE)
     for e in leer_cal():
         hecho = est.get(e["id"], {})
-        if e.get("manual"):
+        if e.get("propuesta"):
+            s = "PROPUESTA (espera aprobación) · " + e.get("nota", "")
+        elif e.get("manual"):
             s = "MANUAL · " + e.get("nota", "")
         elif all(p in hecho for p in e["plataformas"]):
             s = "publicado · " + " ".join(f"{p}:{hecho[p].get('enlace') or hecho[p]['id']}" for p in e["plataformas"])
@@ -282,7 +284,7 @@ def cmd_publicar(a):
     for e in leer_cal():
         if a.id and e["id"] != a.id:
             continue
-        if e.get("manual"):
+        if e.get("manual") or e.get("propuesta"):
             continue
         cuando = fecha(e)
         if not a.forzar and (cuando > ahora or cuando <= ahora - dt.timedelta(hours=VENTANA_H)):

@@ -1,0 +1,9 @@
+_p.html
+*.json
+!reels/words.json
+salida/
+reels/clips/
+reels/vo/
+reels/out/
+reels/prev_*
+__pycache__/
